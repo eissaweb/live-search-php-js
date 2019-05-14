@@ -1,9 +1,10 @@
 <?php
 require __DIR__ . "/vendor/autoload.php";
-$src = "http://localhost/adv-search/src/";
+
 use App\Book;
 use Config\DB;
-
+use Config\Config;
+$src = Config::path() . 'src/';
 $db = new DB;
 $post = new Book($db->connect());
 
