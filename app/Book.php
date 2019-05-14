@@ -37,7 +37,7 @@ class Book
 		// stmt
 		$stmt = $this->conn->prepare($sql);
 
-		$stmt->bindValue(":column", $column); 
+		$stmt->bindValue(':column', $column); 
 		$stmt->bindValue(':value', "%{$value}%");
 
 		$stmt->execute();
