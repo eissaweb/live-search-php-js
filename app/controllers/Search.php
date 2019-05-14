@@ -14,8 +14,8 @@ use App\Book;
 $requestType = $isJson ? $_GET['q'] : $_POST['q']; 
 
 $db = new DB();
-$post = new Book($db->connect());
-$results = $post->search(['title', $requestType]);
+$books = new Book($db->connect());
+$results = $books->search(['title', $requestType]);
 
 // check if the content is json then return json
 
